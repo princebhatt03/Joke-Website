@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Joke Website</title>
+    <link
+      rel="stylesheet"
+      href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="jokeDiv">
+        <h1>Jokes😂</h1>
+        <h3>Tap the Button to get a Funny Random Joke</h3>
+        <button id="btn">Tap</button>
+        <p id="joke"></p>
+      </div>
+      <h5>
+        <a href="https://www.linkedin.com/in/prince-bhatt-0958a725a/"
+          >Created by Prince Bhatt</a
+        >
+      </h5>
+      <h6>
+        <a href="https://github.com/princebhatt160403"
+          >copyright &copy Prince.GitHub</a
+        >
+      </h6>
+    </div>
+    <script>
+      const URL = `https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw&type=single`;
+      const btn = document.getElementById('btn');
+      const joke = document.getElementById('joke');
+
+      const getRandomJoke = async () => {
+        let response = await fetch(URL);
+        // console.log(response.status);
+        let data = await response.json();
+        joke.innerHTML = `${data.joke}`;
+      };
+      btn.addEventListener('click', getRandomJoke);
+    </script>
+  </body>
+</html>

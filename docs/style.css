@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  object-fit: fill;
+  background: url(img/backgroundIMG.jpg);
+}
+#jokeDiv {
+  width: 50vw;
+  overflow: scroll;
+  height: 50vh;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: url(img/backgroundIMG4.jpg);
+  object-fit: cover;
+}
+#jokeDiv::-webkit-scrollbar {
+  display: none;
+}
+h1,
+h3 {
+  padding: 4px 5px;
+}
+h5 {
+  left: 10px;
+  bottom: 5%;
+  font-size: 15px;
+  position: absolute;
+}
+h6 {
+  font-size: 15px;
+  left: 10px;
+  bottom: 10%;
+  position: absolute;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#btn {
+  width: 100px;
+  border-radius: 5px;
+  height: 40px;
+  font-weight: bold;
+  background-color: salmon;
+  padding: 5px 10px;
+  border: none;
+}
+#btn:hover {
+  cursor: pointer;
+  background-color: rgb(232, 57, 38);
+}
+#joke {
+  padding: 10px;
+  padding-top: 25px;
+  font-weight: bold;
+  text-align: center;
+}
